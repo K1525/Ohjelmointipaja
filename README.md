@@ -1,0 +1,2 @@
+# Ohjelmointipaja
+Ohjelmointipajan materiaaleja
