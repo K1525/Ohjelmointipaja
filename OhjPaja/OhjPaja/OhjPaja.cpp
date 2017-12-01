@@ -6,6 +6,66 @@ using namespace std;
 
 string mainMenuItems[2] = { "1. Play","2. Exit" };
 
+
+//Now you can call this function like: areaCalculator(3, 4); which would result to area of 12...
+void areaCalculator(int length, int width) {
+	int area = length * width;
+	cout << "Area: " << area << endl;
+}
+
+
+/*
+//Static muuttuja pitää muuttujan arvon aliohjelmassa muistissa eikä alusta sitä aina uudestaan
+
+void hyva_laskuri(void)
+{
+	static int laskuri = 1;
+	cout << "Laskuri on: " << laskuri << "\n";
+	laskuri++;
+}
+
+void huono_laskuri(void)
+{
+	int laskuri = 1;
+	cout << "Laskuri on: " << laskuri << "\n";
+	laskuri++;
+}
+
+
+void calculatus() {
+	int i;
+	for (i = 1; i <= 3; i++)
+	{
+		hyva_laskuri();
+	}
+
+	cout << "\n";
+
+	for (i = 1; i <= 3; i++)
+	{
+		huono_laskuri();
+	}
+}
+
+
+*/
+
+//Struct allow user to set data to it.                 NOOTTI ITSELLENI: Verrattavissa viewmodeliin
+
+struct HENKILO
+{
+	string name;
+	int age;
+};
+
+HENKILO Janne = { "Janne", 21 };
+
+void printName() {
+	cout << "Name: " << Janne.name << endl;
+	cout << "Age: " << Janne.age << endl;
+}
+
+
 void play() {
 	//samDialogueInit();
 	system("cls");
@@ -47,7 +107,10 @@ void mainMenu() {
 
 int main()
 {	
-	mainMenu();
+	//mainMenu();
+	//areaCalculator(3, 4);
+	//calculatus();
+	printName();
 	system("pause");
     return 0;
 }
